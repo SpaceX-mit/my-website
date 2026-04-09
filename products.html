@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>产品 - Felix's Tech Blog</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-brand"><a href="index.html">Felix</a></div>
+    <ul class="nav-links">
+      <li><a href="index.html">首页</a></li>
+      <li><a href="blog.html">博客</a></li>
+      <li><a href="projects.html">项目</a></li>
+      <li><a href="products.html" class="active">产品</a></li>
+      <li><a href="ideas.html">Ideas</a></li>
+    </ul>
+    <button class="nav-toggle" onclick="toggleNav()">☰</button>
+  </nav>
+
+  <div class="page-header">
+    <div class="container">
+      <h1>产品 & 方案</h1>
+      <p>我设计和构建的产品与技术方案</p>
+    </div>
+  </div>
+
+  <div class="container" style="padding: 2rem 1rem;">
+    <div class="products-grid">
+
+      <div class="product-card featured">
+        <div class="product-badge">主打产品</div>
+        <div class="product-icon">🚀</div>
+        <h3>DevFlow Platform</h3>
+        <p class="product-desc">面向中小团队的一站式开发效能平台，集成代码管理、CI/CD、监控告警和团队协作功能。</p>
+        <ul class="product-features">
+          <li>✓ 可视化流水线编排</li>
+          <li>✓ 多云部署支持</li>
+          <li>✓ 实时监控大盘</li>
+          <li>✓ 团队权限管理</li>
+        </ul>
+        <div class="product-links">
+          <a href="viewer.html?file=content/products/devflow.md" class="btn btn-primary">查看方案</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-icon">🔍</div>
+        <h3>LogLens</h3>
+        <p class="product-desc">智能日志分析工具，基于 LLM 自动识别异常模式，生成可读的故障报告。</p>
+        <ul class="product-features">
+          <li>✓ 多格式日志解析</li>
+          <li>✓ AI 异常检测</li>
+          <li>✓ 自动生成报告</li>
+        </ul>
+        <div class="product-links">
+          <a href="viewer.html?file=content/products/loglens.md" class="btn btn-primary">查看方案</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-icon">📦</div>
+        <h3>EdgeDeploy</h3>
+        <p class="product-desc">边缘节点统一部署管理方案，支持 WASM 模块和容器化应用的混合部署。</p>
+        <ul class="product-features">
+          <li>✓ 零停机更新</li>
+          <li>✓ 离线容错</li>
+          <li>✓ 统一配置下发</li>
+        </ul>
+        <div class="product-links">
+          <a href="viewer.html?file=content/products/edgedeploy.md" class="btn btn-primary">查看方案</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>© 2026 Felix · Built with ❤️ · <a href="https://github.com/felix/my-website" target="_blank">Source</a></p>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

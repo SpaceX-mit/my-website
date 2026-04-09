@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>博客 - Felix's Tech Blog</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-brand"><a href="index.html">Felix</a></div>
+    <ul class="nav-links">
+      <li><a href="index.html">首页</a></li>
+      <li><a href="blog.html" class="active">博客</a></li>
+      <li><a href="projects.html">项目</a></li>
+      <li><a href="products.html">产品</a></li>
+      <li><a href="ideas.html">Ideas</a></li>
+    </ul>
+    <button class="nav-toggle" onclick="toggleNav()">☰</button>
+  </nav>
+
+  <div class="page-header">
+    <div class="container">
+      <h1>技术博客</h1>
+      <p>记录技术探索、学习心得与实践经验</p>
+    </div>
+  </div>
+
+  <div class="container main-layout">
+    <main class="content-area">
+      <div class="filter-bar">
+        <button class="filter-btn active" onclick="filterPosts('all')">全部</button>
+        <button class="filter-btn" onclick="filterPosts('系统')">系统</button>
+        <button class="filter-btn" onclick="filterPosts('AI')">AI</button>
+        <button class="filter-btn" onclick="filterPosts('Web')">Web</button>
+        <button class="filter-btn" onclick="filterPosts('工具')">工具</button>
+      </div>
+
+      <div class="post-list" id="post-list">
+        <article class="post-item" data-tags="AI,工具">
+          <div class="post-meta">
+            <span class="post-date">2026-04-01</span>
+            <span class="post-tag">AI</span>
+          </div>
+          <h2><a href="viewer.html?file=content/blog/wasm-edge.md">探索 WebAssembly 的边界</a></h2>
+          <p>深入研究 WASM 在边缘计算场景下的性能表现与应用实践，包括与原生代码的性能对比...</p>
+          <a href="viewer.html?file=content/blog/wasm-edge.md" class="read-more">阅读全文 →</a>
+        </article>
+
+        <article class="post-item" data-tags="系统,工具">
+          <div class="post-meta">
+            <span class="post-date">2026-03-20</span>
+            <span class="post-tag">系统</span>
+          </div>
+          <h2><a href="viewer.html?file=content/blog/go-monitoring.md">用 Go 构建轻量级监控系统</a></h2>
+          <p>从零开始设计并实现一个轻量级的服务监控系统，支持指标采集、存储和告警...</p>
+          <a href="viewer.html?file=content/blog/go-monitoring.md" class="read-more">阅读全文 →</a>
+        </article>
+
+        <article class="post-item" data-tags="AI">
+          <div class="post-meta">
+            <span class="post-date">2026-03-10</span>
+            <span class="post-tag">AI</span>
+          </div>
+          <h2><a href="viewer.html?file=content/blog/llm-code-review.md">LLM 辅助代码审查实践</a></h2>
+          <p>将大语言模型集成到 CI/CD 流程中，实现自动化代码审查，提升团队代码质量...</p>
+          <a href="viewer.html?file=content/blog/llm-code-review.md" class="read-more">阅读全文 →</a>
+        </article>
+
+        <article class="post-item" data-tags="Web">
+          <div class="post-meta">
+            <span class="post-date">2026-02-28</span>
+            <span class="post-tag">Web</span>
+          </div>
+          <h2><a href="viewer.html?file=content/blog/web-perf.md">前端性能优化实战</a></h2>
+          <p>从 Core Web Vitals 出发，系统梳理前端性能优化的方法论与实践技巧...</p>
+          <a href="viewer.html?file=content/blog/web-perf.md" class="read-more">阅读全文 →</a>
+        </article>
+      </div>
+    </main>
+
+    <aside class="sidebar">
+      <div class="widget">
+        <h3>分类</h3>
+        <ul class="category-list">
+          <li><a href="#">系统架构 <span>5</span></a></li>
+          <li><a href="#">AI/ML <span>8</span></a></li>
+          <li><a href="#">Web 开发 <span>6</span></a></li>
+          <li><a href="#">开发工具 <span>4</span></a></li>
+          <li><a href="#">开源项目 <span>3</span></a></li>
+        </ul>
+      </div>
+      <div class="widget">
+        <h3>标签</h3>
+        <div class="tags-cloud small">
+          <span class="tag">Go</span>
+          <span class="tag">Python</span>
+          <span class="tag">WASM</span>
+          <span class="tag">LLM</span>
+          <span class="tag">Docker</span>
+          <span class="tag">Linux</span>
+          <span class="tag">性能优化</span>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="footer">
+    <p>© 2026 Felix · Built with ❤️ · <a href="https://github.com/felix/my-website" target="_blank">Source</a></p>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    function filterPosts(tag) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      event.target.classList.add('active');
+      document.querySelectorAll('.post-item').forEach(item => {
+        if (tag === 'all' || item.dataset.tags.includes(tag)) {
+          item.style.display = '';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Felix's Tech Blog</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-brand"><a href="index.html">Felix</a></div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">首页</a></li>
+      <li><a href="blog.html">博客</a></li>
+      <li><a href="projects.html">项目</a></li>
+      <li><a href="products.html">产品</a></li>
+      <li><a href="ideas.html">Ideas</a></li>
+    </ul>
+    <button class="nav-toggle" onclick="toggleNav()">☰</button>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="avatar">F</div>
+      <h1>Hi, I'm Felix</h1>
+      <p class="tagline">技术探索者 · 开发者 · 创造者</p>
+      <p class="bio">专注于软件开发、系统架构与技术创新。在这里分享我的技术博客、项目经验、产品思考和各种奇思妙想。</p>
+      <div class="hero-links">
+        <a href="blog.html" class="btn btn-primary">阅读博客</a>
+        <a href="projects.html" class="btn btn-outline">查看项目</a>
+        <a href="https://github.com/felix" target="_blank" class="btn btn-outline">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">最新动态</h2>
+      <div class="cards-grid" id="recent-posts">
+        <a href="blog.html" class="card card-link">
+          <div class="card-tag">博客</div>
+          <h3>探索 WebAssembly 的边界</h3>
+          <p>深入研究 WASM 在边缘计算场景下的性能表现与应用实践...</p>
+          <span class="card-date">2026-04-01</span>
+        </a>
+        <a href="projects.html" class="card card-link">
+          <div class="card-tag">项目</div>
+          <h3>开源项目：轻量级监控系统</h3>
+          <p>基于 Go 构建的轻量级服务监控与告警系统，支持多种数据源...</p>
+          <span class="card-date">2026-03-20</span>
+        </a>
+        <a href="ideas.html" class="card card-link">
+          <div class="card-tag">Ideas</div>
+          <h3>AI 辅助代码审查的可能性</h3>
+          <p>思考如何将大语言模型融入日常代码审查流程，提升团队效率...</p>
+          <span class="card-date">2026-03-15</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">技术栈</h2>
+      <div class="tags-cloud">
+        <span class="tag">Go</span>
+        <span class="tag">Python</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">Rust</span>
+        <span class="tag">Linux</span>
+        <span class="tag">Docker</span>
+        <span class="tag">Kubernetes</span>
+        <span class="tag">WebAssembly</span>
+        <span class="tag">AI/ML</span>
+        <span class="tag">系统架构</span>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2026 Felix · Built with ❤️ · <a href="https://github.com/felix/my-website" target="_blank">Source</a></p>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
