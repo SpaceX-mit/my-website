@@ -607,6 +607,17 @@ a:hover {
   color: var(--text-light);
 }
 
+.site-stats {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+.site-stats span {
+  color: var(--primary);
+  font-weight: 600;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .nav-links {
